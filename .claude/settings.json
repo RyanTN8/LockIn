@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//usr/local/go/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//Users/ryannguyen/go/**)",
+      "Bash(brew --version)",
+      "Bash(go version *)",
+      "Bash(/opt/homebrew/bin/go version *)",
+      "Bash(find /opt/homebrew -name \"go\" -type f 2>/dev/null | head -5; find /usr/local -name \"go\" -type f 2>/dev/null | head -5)",
+      "Read(//opt/homebrew/**)",
+      "Read(//usr/local/**)",
+      "Bash(export PATH=\"/opt/homebrew/bin:/usr/local/go/bin:$HOME/go/bin:$PATH\")",
+      "Bash(go build *)",
+      "Bash(go list *)",
+      "Bash(docker build *)"
+    ],
+    "additionalDirectories": [
+      "/Users/ryannguyen/proxy"
+    ]
+  }
+}
