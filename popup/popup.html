@@ -6,12 +6,40 @@
   <title>LockIn</title>
 </head>
 <body>
-  <h1>LockIn</h1>
-  <ul class="toggles">
-    <li><label><input type="checkbox" id="youtube"> YouTube — hide Shorts</label></li>
-    <li><label><input type="checkbox" id="instagram"> Instagram — hide Reels</label></li>
-  </ul>
-  <p class="version">v0.1.0</p>
+  <header>
+    <div class="logo">LockIn</div>
+    <div class="tagline">restoring your attention span</div>
+  </header>
+  <main>
+    <div class="row" style="--accent: #ff000018;">
+      <div class="platform">
+        <span class="dot yt"></span>
+        <div>
+          <div class="name">YouTube</div>
+          <div class="desc">Hide Shorts</div>
+        </div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="youtube">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="divider"></div>
+    <div class="row" style="--accent: #e1306c18;">
+      <div class="platform">
+        <span class="dot ig"></span>
+        <div>
+          <div class="name">Instagram</div>
+          <div class="desc">Hide Reels</div>
+        </div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="instagram">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </main>
+  <footer>v0.1.0</footer>
   <script src="popup.js"></script>
 </body>
 </html>

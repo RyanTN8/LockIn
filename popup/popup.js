@@ -22,6 +22,15 @@ const save = async () => {
 document.addEventListener('DOMContentLoaded', () => {
   load();
   for (const site of SITES) {
-    document.getElementById(site).addEventListener('change', save);
+    const el = document.getElementById(site);
+    el.addEventListener('change', () => {
+      save();
+      const row = el.closest('.row');
+      const cls = el.checked ? 'on-anim' : 'off-anim';
+      row.classList.remove('on-anim', 'off-anim');
+      void row.offsetWidth;
+      row.classList.add(cls);
+      row.addEventListener('animationend', () => row.classList.remove(cls), { once: true });
+    });
   }
 });
